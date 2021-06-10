@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            h1{
+                color: #6369D1;
+                text-align: center;
+            }
+            form {
+                background-color: #60E1E0;
+                padding: 40px 40px 40px 40px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            }
+            body {
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               padding-left: 20%;
+               padding-right: 20%;
+            }
+            #name-label {
+                display: block;
+                padding-bottom: 5px;
+                font-weight: 650;
+            }
+            #name {
+                padding-bottom: 10px;
+                width: 100%;
+                height: 15px;
+            }
+            #email-label{
+                display: block;
+                padding-bottom: 5px;
+                font-weight: 650;
+            }
+            #email {
+                padding-bottom: 10px;
+                width: 100%;
+                height: 15px;
+            }
+            #number-label {
+                display: block;
+                padding-bottom: 5px;
+                font-weight: 650;
+            }
+            #number {
+                padding-bottom: 10px;
+                width: 100%;
+                height: 15px;
+            }
+            legend {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-weight: 650;
+            }
+            #text {
+                width: 100%;
+                height: 70px;
+            }
+            #submit {
+                width: 100%;
+                background-color: #6369D1;
+                margin-top: 10px;
+                height: 40px;
+                border-radius: 1%;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            }
+            #submit:hover {
+                animation-name: transform;
+                animation-duration: 500ms;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes transform {
+                100% {
+                            transform: scale(1.05);
+                }
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <h1 id="title">Improve Your Trading Experience</h1>
+        <p id="description">Thank your for taking your time to answer our questions. This is a short survey where we would like to know what your favorite crypto trading platform is and why.</p>
+        <form id="survey-form">
+            <label id="name-label">Name:</label> 
+            <input type="text" name="name" id="name" required placeholder="Please enter your full name"><br>
+            <label id="email-label">Email:</label> 
+            <input type="email" name="email" id="email" required placeholder="Please enter your email"><br>
+            <label id="number-label">Age:</label> 
+            <input type="number" name="number" id="number" min="18" max="60" required placeholder="Please select your age"><br>
+            
+            
+            <legend>Which of the following platforms do you normally trade with?</legend>
+            <select id="dropdown" name="platforms">
+                <option value="binance">Binance</option>
+                <option value="pancakeswap">Pancake Swap</option>
+                <option value="uniswap">Uniswap</option>
+                <option value="coinbase">Coinbase</option>
+            </select><br>
+
+            <legend>What level of trading would you describe yourself as?</legend>
+            <input type="radio" name="level" value="beginner" checked>
+            <label for="beginner">Beginner</label><br>
+            <input type="radio" name="level" value="intermediate">
+            <label for="intermediate">Intermediate</label><br>
+            <input type="radio" name="level" value="advanced">
+            <label for="advanced">Advanced</label><br>
+
+            <legend>What type of support do you think you need to improve your trading knowledge?</legend>
+            <input type="checkbox" name="support1" value="weekly meetups" checked>
+            <label for="weekly meetups">Weekly Meetups</label><br>
+            <input type="checkbox" name="support2" value="tutorials">
+            <label for="tutorials">Tutorials</label><br>
+            <input type="checkbox" name="support3" value="amas">
+            <label for="amas">AMAs</label><br>
+            <input type="checkbox" name="support4" value="trading bots">
+            <label for="trading bots">Trading bots</label><br>
+            <input type="checkbox" name="support5" value="advisors/partners">
+            <label for="advisors/partners">Advisors/Partners</label><br>
+            <input type="checkbox" name="support6" value="daily news trends">
+            <label for="daily news trends">Daily News Trends</label><br>
+
+            <legend>Any other information you think would improve your trading experience?</legend>
+            <input id="text" type="textarea"><br>
+
+            
+            <input type="submit" id="submit">
+        </form>
+    </body>
+</html>
